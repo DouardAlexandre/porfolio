@@ -7,7 +7,6 @@ $( document ).ready(function() {
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d');
 	canvas.width = innerWidth;
-
 	canvas.height = innerHeight;
    /* canvas.width = 1000;
    canvas.height = 1000;*/
@@ -28,7 +27,7 @@ $( document ).ready(function() {
 
 	setInterval(function(){
 		party.addsmoke(innerWidth/2, innerHeight, 1)
-	}, 100)
+	}, 500)
 
     
 

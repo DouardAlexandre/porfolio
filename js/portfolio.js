@@ -20,6 +20,21 @@
       loop: true
   });
 
+    //animation path bird
+    var path = anime.path('#motionPath path');
+
+    var motionPath = anime({
+      targets: '#motionPath .el',
+      translateX: path('x'),
+      translateY: path('y'),
+      //rotate: path('angle'),
+      easing: 'easeOutQuint',
+      duration: 2000,
+      loop: true
+    });
+
+
+
    /* var morphing2 = anime({
       targets: '#morphing2 .polymorph2 path',
           d: [
@@ -33,6 +48,9 @@
       duration: 600,
       loop: true
   });*/
+ 
+
+
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
