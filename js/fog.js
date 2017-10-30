@@ -12,7 +12,7 @@ $( document ).ready(function() {
    canvas.height = 1000;*/
 
     // smokemachine(context, [r,g,b])
-    var party = smokemachine(ctx, [206, 206, 206]);
+    var party = smokemachine(ctx, [0, 0, 255, 0.5]);
 
     // start animating
    party.start(); 
