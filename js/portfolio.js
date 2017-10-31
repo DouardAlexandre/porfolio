@@ -2,7 +2,24 @@
 
 (function($) {
 
-    
+    var lastScrollTop = 0;
+    $("header").scroll(function (event) {
+
+    var move = $(this).scrollTop();
+    if (move > lastScrollTop) {
+
+      $('img').animate({top: '-=10'}, 10);
+
+      } else {
+
+      $('img').animate({top: '+=10'}, 10);
+
+      }
+
+      lastScrollTop = move;
+
+    });
+
 
 
     //animation birds
