@@ -20,7 +20,7 @@
       loop: true
   });
 
-    //animation path bird
+    //animation path bird small
     var path = anime.path('#motionPath #path');
 
     var motionPath = anime({
@@ -33,16 +33,29 @@
       loop: true
     });
 
-//animation path bird
-    var path2 = anime.path('#motionPath2 #path');
+    //animation path bird big
+    var path2 = anime.path('#motionPath2 #path2');
 
     var motionPath2 = anime({
-      targets: '#motionPath2 .el',
+      targets: '#motionPath2 .el2',
       translateX: path('x'),
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 6000,
+      duration: 8000,
+      loop: true
+    });
+
+    //animation path bird big
+    var path3 = anime.path('#motionPath3 #path3');
+
+    var motionPath3 = anime({
+      targets: '#motionPath3 .el3',
+      translateX: path('x'),
+      translateY: path('y'),
+      //rotate: path('angle'),
+      easing: 'linear',
+      duration: 8000,
       loop: true
     });
 

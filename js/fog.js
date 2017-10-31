@@ -12,7 +12,7 @@ $( document ).ready(function() {
    canvas.height = 1000;*/
 
     // smokemachine(context, [r,g,b])
-    var party = smokemachine(ctx, [0, 0, 255, 0.5]);
+    var party = smokemachine(ctx, [255, 255, 255]);
 
     // start animating
    party.start(); 
@@ -26,7 +26,7 @@ $( document ).ready(function() {
 	}*/
 
 	setInterval(function(){
-		party.addsmoke(innerWidth/2, innerHeight, 1)
+		party.addsmoke(innerWidth/2, innerHeight,6)
 	}, 500)
 
     
