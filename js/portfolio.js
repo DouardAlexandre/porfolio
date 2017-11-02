@@ -1,19 +1,28 @@
-// Freelancer Theme JavaScript
+ 
 
 (function($) {
 
-    //scroll nav jquery color
+    //scroll nav 
+    var scroll_start = 0;
+    var nav = $('.navbar-custom');
+    var links = $(".navbar-nav li a");
+    var coord = nav.offset();
 
-        if ($(document).scrollTop() > 850) { 
-          
-           $(".navbar-fixed-top").animate({backgroundColor: "#fff"}, 1000 );
-        } else {
-          $(".navbar-fixed-top").animate({backgroundColor: "transparent"}, 1000 ); 
+    $(document).scroll(function() {
+
+        scroll_start = $(this).scrollTop();
+        if (scroll_start > coord.top && scroll_start < 1500){
+              nav.css('background-color', 'transparent');  
+        } else if(scroll_start > 1500){
+            nav.css('background-color', 'black');
         }
-    
+    });
       
-   
-//const tilt = $('.js-tilt').tilt();
+    $(".project").hover3d({
+     selector: ".project__card"
+    });
+    
+
     //animation bird
     var morphing = anime({
       targets: '.bird .polymorph path',
