@@ -9,6 +9,7 @@
 }
 body {
   font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 p {
@@ -37,6 +38,56 @@ h6 {
 }
 .img-centered {
   margin: 0 auto;
+}
+/* ---------------------------------------------Nav-------------------------------------- */
+#mainNav #collapse-1 .nav .page-scroll a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: red!important;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1.35em;
+}
+#mainNav #collapse-1 .nav .page-scroll a span {
+  color: red!important;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0 14px;
+  background: #e35041;
+  -webkit-transition: -webkit-transform 0.4s, background 0.4s;
+  -moz-transition: -moz-transform 0.4s, background 0.4s;
+  transition: transform 0.4s, background 0.4s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50% -100px;
+  -moz-transform-origin: 50% 50% -100px;
+  transform-origin: 50% 50% -100px;
+}
+#mainNav #collapse-1 .nav .page-scroll a span::before {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: #b53a2d;
+  content: attr(data-hover);
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  transition: background 0.4s;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  pointer-events: none;
 }
 /* ---------------------------------------------header-------------------------------------- */
 header {
@@ -78,7 +129,7 @@ header canvas {
   top: 0;
   left: -30rem;
   opacity: .4;
-  transform: rotate(70deg);
+  transform: rotate(80deg);
 }
 header img {
   display: block;
@@ -170,7 +221,7 @@ header .bird .motionPath3 svg {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: grey;
+  color: gray-light;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -179,13 +230,13 @@ header .bird .motionPath3 svg {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: grey;
+  background: gray-light;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: grey;
+  background: gray-light;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -195,13 +246,13 @@ header .bird .motionPath3 svg {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: grey;
+  background-color: gray-light;
   color: white;
-  border-color: grey;
+  border-color: gray-light;
 }
 /* about--------------------------------------------------------------------------- */
 section.about {
-  background: #091110;
+  background: black;
   color: white;
 }
 section.about h2 {
@@ -241,7 +292,7 @@ section h2 {
   .treebox .trees {
     max-height: 500px;
     position: absolute;
-    background-image: url("../img/tree3.png");
+    background-image: url("../img/tree4.png");
     background-size: cover;
     top: -17rem;
     width: 100%;
@@ -318,7 +369,7 @@ section h2 {
 .angle .triangle {
   width: 0;
   height: 0;
-  border-left: 100vw solid #091110;
+  border-left: 100vw solid black;
   border-bottom: 100px solid transparent;
 }
 /* --------------------------portfolio---------------------------------------------------------------- */
@@ -420,7 +471,7 @@ section h2 {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: grey;
+  color: gray-light;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -454,7 +505,7 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: grey;
+  color: gray-light;
   background: white;
   border: solid 2px white;
 }
@@ -500,48 +551,10 @@ fieldset[disabled] .btn-primary.active {
   color: #2C3E50;
   background-color: white;
 }
-.btn-success {
-  color: white;
-  background-color: grey;
-  border-color: grey;
-  font-weight: 700;
-}
-.btn-success:hover,
-.btn-success:focus,
-.btn-success:active,
-.btn-success.active,
-.open .dropdown-toggle.btn-success {
-  color: white;
-  background-color: #676767;
-  border-color: #616161;
-}
-.btn-success:active,
-.btn-success.active,
-.open .dropdown-toggle.btn-success {
-  background-image: none;
-}
-.btn-success.disabled,
-.btn-success[disabled],
-fieldset[disabled] .btn-success,
-.btn-success.disabled:hover,
-.btn-success[disabled]:hover,
-fieldset[disabled] .btn-success:hover,
-.btn-success.disabled:focus,
-.btn-success[disabled]:focus,
-fieldset[disabled] .btn-success:focus,
-.btn-success.disabled:active,
-.btn-success[disabled]:active,
-fieldset[disabled] .btn-success:active,
-.btn-success.disabled.active,
-.btn-success[disabled].active,
-fieldset[disabled] .btn-success.active {
-  background-color: grey;
-  border-color: grey;
-}
-.btn-success .badge {
-  color: grey;
-  background-color: white;
-}
+/* .btn-success {
+	.button-variant(white; @theme-success; @theme-success);
+	font-weight: 700;
+} */
 .btn-social {
   display: inline-block;
   height: 50px;
