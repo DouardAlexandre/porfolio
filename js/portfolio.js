@@ -17,10 +17,24 @@
             nav.css('background-color', 'black');
         }
     });
-      
+
+    //hover 3d
     $(".project").hover3d({
      selector: ".project__card"
     });
+
+    //Lightbox
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+       event.preventDefault();
+       $(this).ekkoLightbox({
+                alwaysShowClose: true
+                
+            });
+    });
+$('#open-image').click(function (e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
+            });
     
 
     //animation bird
