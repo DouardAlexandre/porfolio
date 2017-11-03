@@ -40,55 +40,6 @@ h6 {
   margin: 0 auto;
 }
 /* ---------------------------------------------Nav-------------------------------------- */
-#mainNav #collapse-1 .nav .page-scroll a {
-  position: relative;
-  display: inline-block;
-  margin: 15px 25px;
-  outline: none;
-  color: red!important;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-  font-size: 1.35em;
-}
-#mainNav #collapse-1 .nav .page-scroll a span {
-  color: red!important;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  padding: 0 14px;
-  background: #e35041;
-  -webkit-transition: -webkit-transform 0.4s, background 0.4s;
-  -moz-transition: -moz-transform 0.4s, background 0.4s;
-  transition: transform 0.4s, background 0.4s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform-origin: 50% 50% -100px;
-  -moz-transform-origin: 50% 50% -100px;
-  transform-origin: 50% 50% -100px;
-}
-#mainNav #collapse-1 .nav .page-scroll a span::before {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  background: #b53a2d;
-  content: attr(data-hover);
-  -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  transition: background 0.4s;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  transform: rotateY(90deg);
-  -webkit-transform-origin: 0 50%;
-  -moz-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  pointer-events: none;
-}
 /* ---------------------------------------------header-------------------------------------- */
 header {
   position: relative;
@@ -126,8 +77,8 @@ header .container {
 header canvas {
   position: absolute;
   margin-top: 40rem;
-  top: 0;
-  left: -30rem;
+  top: 10rem;
+  left: -33rem;
   opacity: .4;
   transform: rotate(80deg);
 }
@@ -136,6 +87,7 @@ header img {
   margin: 0 auto 20px;
 }
 header .intro-text .name {
+  color: #eeeeee;
   display: block;
   font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -197,10 +149,10 @@ header .bird .motionPath3 svg {
   text-transform: uppercase;
   font-weight: 700;
   border: none;
-  -webkit-transition: all 3s ease-in;
-  -moz-transition: all 3s ease-in;
-  -o-transition: all 3s ease-in;
-  transition: all 3s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 .navbar-custom a:focus {
   outline: none;
@@ -215,7 +167,7 @@ header .bird .motionPath3 svg {
   color: white;
 }
 .navbar-custom .navbar-nav {
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 .navbar-custom .navbar-nav li a {
   color: white;
@@ -280,6 +232,13 @@ section h2 {
   position: absolute;
 }
 @media (max-width: 767px) {
+  .navbar-custom {
+    padding: 25px 0;
+  }
+  .navbar-custom .navbar-collapse {
+    background-color: white;
+    padding-bottom: 4rem;
+  }
   section {
     padding: 75px 0;
   }
@@ -294,7 +253,7 @@ section h2 {
     position: absolute;
     background-image: url("../img/tree4.png");
     background-size: cover;
-    top: -17rem;
+    top: -18rem;
     width: 100%;
   }
 }
@@ -329,7 +288,7 @@ section h2 {
     max-height: 700px;
     position: absolute;
     background-size: cover;
-    top: -25rem;
+    top: -26rem;
     width: 100%;
   }
 }
@@ -554,7 +513,7 @@ fieldset[disabled] .btn-primary.active {
 /* .btn-success {
 	.button-variant(white; @theme-success; @theme-success);
 	font-weight: 700;
-} */
+	} */
 .btn-social {
   display: inline-block;
   height: 50px;
@@ -595,23 +554,23 @@ fieldset[disabled] .btn-primary.active {
   box-shadow: none;
   border: none;
   min-height: 100%;
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
 }
 .portfolio-modal .modal-content h2 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2em;
 }
 .portfolio-modal .modal-content img {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .portfolio-modal .modal-content .item-details {
   margin: 30px 0;
 }
 .portfolio-modal .close-modal {
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 45px;
+  height: 45px;
   background-color: transparent;
   top: 25px;
   right: 25px;

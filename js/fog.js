@@ -8,8 +8,8 @@ $( document ).ready(function() {
 	var ctx = canvas.getContext('2d');
 	canvas.width = innerWidth;
 	canvas.height = innerHeight;
-   /* canvas.width = 1000;
-   canvas.height = 1000;*/
+    canvas.width = 1000;
+   canvas.height = 1500;
 
     // smokemachine(context, [r,g,b])
     var party = smokemachine(ctx, [255, 255, 255]);
@@ -26,7 +26,7 @@ $( document ).ready(function() {
 	}*/
 
 	setInterval(function(){
-		party.addsmoke(innerWidth/2, innerHeight,6)
+		party.addsmoke(innerWidth/2, innerHeight,8)
 	}, 500)
 
     
