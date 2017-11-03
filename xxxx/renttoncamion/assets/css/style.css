@@ -1,0 +1,55 @@
+body{
+	margin:0;
+	padding: 0;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+header{
+	position: absolute;
+	height: 80px;
+	width: 100%;
+	border-bottom: 1px solid #212584;
+	text-align: center
+	
+
+}
+section{
+	position: relative;
+	width: calc(100%-200px);
+	height: calc(100%-200px);
+	transform:scale(1.2);
+	top:180px;
+}
+
+.carton{
+	position: absolute;
+	transform:scale(0.4);
+	
+
+}
+
+.truck{
+	position: absolute;
+	left:80px;
+}
+
+.newsletter{
+	position: absolute;
+	width:200px;
+	height:200px;
+	background-color: blue;
+	right: 80px;
+
+}
+
+.slogan{
+	position: absolute;
+	left:150px;
+	top:180px;
+}
+.rentton{
+	color: #2D9CDB;
+}

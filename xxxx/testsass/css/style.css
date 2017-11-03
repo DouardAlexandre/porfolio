@@ -1,0 +1,307 @@
+.ruban {
+  width: 100%;
+  height: 3rem;
+  background-color: #69ccf0;
+  background: linear-gradient(#69ccf0, #303741);
+  margin-bottom: 1.5rem;
+  margin-top: .5rem; }
+
+header {
+  font-family: "Open Sans", sans-serif;
+  background-color: #69ccf0;
+  font-size: 5rem;
+  height: 10rem;
+  line-height: 10rem;
+  text-align: center;
+  color: #303741; }
+
+body {
+  background-color: #303741; }
+
+#fade {
+  opacity: 0;
+  transition: opacity 4s; }
+
+.fade {
+  opacity: 0;
+  transition: opacity 4s; }
+
+h1 {
+  position: absolute;
+  color: #303741;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: "Open Sans", sans-serif; }
+
+p {
+  color: #303741;
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: "Open Sans", sans-serif; }
+
+.timeline {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: .1rem;
+  height: 80rem;
+  background: #69ccf0; }
+
+.square {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: -3.075rem;
+  right: 0;
+  transition: 4s;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: #69ccf0;
+  position: relative;
+  top: -50px;
+  transform: scale(0.3);
+  top: -1rem; }
+  .square:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: #69ccf0; }
+
+.square2 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: -3.075rem;
+  right: 0;
+  transition: 4s;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: #303741;
+  position: relative;
+  top: -50px;
+  top: -2rem;
+  z-index: 100; }
+  .square2:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: #303741; }
+
+.circle {
+  top: 16.7rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #69ccf0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px; }
+
+.circle2 {
+  top: 26.5rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #69ccf0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px; }
+
+.circle3 {
+  top: 36.5rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #69ccf0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px; }
+
+.circle4 {
+  top: 46.7rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #69ccf0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px; }
+
+.circle5 {
+  top: 56.5rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #69ccf0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px; }
+
+.triangle {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #69ccf0;
+  border-right: 100px solid transparent;
+  transform: scale(0.5);
+  left: 13rem; }
+  @media screen and (max-width: 730px) {
+    .triangle {
+      left: 8rem; } }
+  @media screen and (min-width: 1000px) {
+    .triangle {
+      width: 13rem; } }
+
+.article {
+  border-radius: 1rem;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  background-color: #69ccf0;
+  margin-left: 40px; }
+  @media screen and (max-width: 730px) {
+    .article {
+      width: 10rem;
+      margin-left: 10px;
+      height: 18rem; } }
+  @media screen and (min-width: 1000px) {
+    .article {
+      width: 25rem; } }
+
+.article2 {
+  border-radius: 1rem;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  margin-top: 10rem;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  background-color: #69ccf0;
+  right: 40px; }
+  @media screen and (max-width: 730px) {
+    .article2 {
+      width: 10rem;
+      margin-right: -20px;
+      height: 18rem; } }
+  @media screen and (min-width: 1000px) {
+    .article2 {
+      width: 25rem; } }
+
+.article3 {
+  border-radius: 1rem;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  background-color: #69ccf0;
+  margin-top: 20rem;
+  margin-left: 40px; }
+  @media screen and (max-width: 730px) {
+    .article3 {
+      width: 10rem;
+      margin-left: 10px;
+      height: 18rem; } }
+  @media screen and (min-width: 1000px) {
+    .article3 {
+      width: 25rem; } }
+
+.article4 {
+  border-radius: 1rem;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  margin-top: 30rem;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  background-color: #69ccf0;
+  right: 40px; }
+  @media screen and (max-width: 730px) {
+    .article4 {
+      width: 10rem;
+      margin-right: -20px;
+      height: 18rem; } }
+  @media screen and (min-width: 1000px) {
+    .article4 {
+      width: 25rem; } }
+
+.article5 {
+  border-radius: 1rem;
+  margin-top: 40rem;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  background-color: #69ccf0;
+  margin-left: 40px; }
+  @media screen and (max-width: 730px) {
+    .article5 {
+      width: 10rem;
+      margin-left: 10px;
+      height: 18rem; } }
+  @media screen and (min-width: 1000px) {
+    .article5 {
+      width: 25rem; } }
+
+.flip {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+.dot {
+  background-color: #303741;
+  margin-left: 8px;
+  left: 0px;
+  top: 8px; }
