@@ -4,10 +4,17 @@
 	font-family: "Montserrat";
 	src: url('../vendor/fonts/Montserrat-Regular.ttf');
 }
+
 body {
+	margin:0;
+	padding: 0;
 	font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	.modal-open { 
+		overflow-y: hidden!important;
+		margin-right: 0;
+	}
 }
 
 p {
@@ -32,8 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-
-
+h2{
+	display:block;
+}
+.modal-dialog {width:600px;}
+.thumbnail {margin-bottom:6px;}
 
 .img-centered {
 	margin: 0 auto;
@@ -137,39 +147,39 @@ header {
 	// smoke
 	canvas{
 		//background-color:red;
-    position :absolute;
-    margin-top:40rem;
-    top:10rem;
-    left:-33rem;
-    opacity:.4;
-    transform:rotate(80deg);
+		position :absolute;
+		margin-top:40rem;
+		top:10rem;
+		left:-33rem;
+		opacity:.4;
+		transform:rotate(80deg);
 
-}
+	}
 
 
-img {
+	img {
 
-	display: block;
-	margin: 0 auto 20px;
-}
-.intro-text {
-	.name {
-		color:@gray-lighter;
 		display: block;
-		font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 1.5em;
+		margin: 0 auto 20px;
 	}
-	.skills {
-		font-size: 1.25em;
-		font-weight: 300;
+	.intro-text {
+		.name {
+			color:@gray-lighter;
+			display: block;
+			font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.5em;
+		}
+		.skills {
+			font-size: 1.25em;
+			font-weight: 300;
+		}
 	}
-}
 
-.bird{
-	.motionPath{
-		svg{
+	.bird{
+		.motionPath{
+			svg{
 			//z-index:10;
 			position: absolute;
 		}
@@ -509,14 +519,14 @@ img {
 		}
 	}
 	* {
-		z-index: 2;
+		//z-index: 2;
 	}
 }
 
 @media(min-width:767px) {
 	#portfolio {
 		.portfolio-item {
-			margin: 0 0 30px;
+			margin: 0 0 20px;
 		}
 	}
 }
@@ -660,13 +670,25 @@ footer {
 			}
 		}
 	}
-
+	/* -------------------------------------------------------------modals---------------------------------------------- */
+	
+	.fade {
+		opacity: 0.75;
+		background-color: #000;
+	}
+	#myModal{
+		
+		overflow-y: auto !important 
+	}
 	.portfolio-modal {
-		.modal-content {
-			border-radius: 0;
+
+			//overflow-y: visible !important
+			.modal-content {
+				overflow-y: auto !important ;
+				border-radius: 0;
 			//transparency border
 			background-clip: border-box;
-			//background-color:white;
+			background-color:white;
 			-webkit-box-shadow: none;
 			box-shadow: none;
 			border: none;
@@ -685,6 +707,7 @@ footer {
 			}
 		}
 		.close-modal {
+
 			position: absolute;
 			width:45px;
 			height:45px;
@@ -696,7 +719,8 @@ footer {
 				opacity: 0.3;
 			}
 			.lr {
-				height:75px;
+
+				height:35px;
 				width:1px;
 				margin-left:35px;
 				background-color:@theme-primary;
@@ -707,7 +731,7 @@ footer {
 				/* Safari and Chrome */
 				z-index:1051;
 				.rl {
-					height:75px;
+					height:35px;
 					width:1px;
 					background-color:@theme-primary;
 					transform: rotate(90deg);
@@ -720,6 +744,7 @@ footer {
 			}
 		}
 		.modal-backdrop {
+			z-index: -1;
 			opacity: 0;
 			display: none;
 		}

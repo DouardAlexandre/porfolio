@@ -7,7 +7,14 @@
   font-family: "Montserrat";
   src: url('../vendor/fonts/Montserrat-Regular.ttf');
 }
+html,
 body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -35,6 +42,15 @@ h6 {
   font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+}
+h2 {
+  display: block;
+}
+.modal-dialog {
+  width: 600px;
+}
+.thumbnail {
+  margin-bottom: 6px;
 }
 .img-centered {
   margin: 0 auto;
@@ -378,12 +394,9 @@ section h2 {
   max-width: 400px;
   margin: 0 auto;
 }
-#portfolio * {
-  z-index: 2;
-}
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
   }
 }
 .floating-label-form-group {
@@ -547,9 +560,29 @@ fieldset[disabled] .btn-primary.active {
 .scroll-top .btn:focus {
   outline: none;
 }
+/* -------------------------------------------------------------modals---------------------------------------------- */
+.fade {
+  opacity: 0.75;
+  background-color: #000;
+}
+#myModal {
+  height: 100%;
+  width: 100%;
+  z-index: 1500;
+  overflow: hidden;
+}
+.portfolio-modal {
+  height: 100%;
+  width: 100%;
+  padding: 0!important;
+  margin: 0!important;
+  overflow-x: visible !important;
+}
 .portfolio-modal .modal-content {
+  overflow-x: visible !important;
   border-radius: 0;
   background-clip: border-box;
+  background-color: white;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
@@ -580,7 +613,7 @@ fieldset[disabled] .btn-primary.active {
   opacity: 0.3;
 }
 .portfolio-modal .close-modal .lr {
-  height: 75px;
+  height: 35px;
   width: 1px;
   margin-left: 35px;
   background-color: #2C3E50;
@@ -592,7 +625,7 @@ fieldset[disabled] .btn-primary.active {
   z-index: 1051;
 }
 .portfolio-modal .close-modal .lr .rl {
-  height: 75px;
+  height: 35px;
   width: 1px;
   background-color: #2C3E50;
   transform: rotate(90deg);
@@ -603,6 +636,7 @@ fieldset[disabled] .btn-primary.active {
   z-index: 1052;
 }
 .portfolio-modal .modal-backdrop {
+  z-index: -1;
   opacity: 0;
   display: none;
 }
