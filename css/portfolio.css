@@ -106,11 +106,11 @@ header #motionPath2 .motion-path .bird svg {
   opacity: .4;
   transform: scale(0.2);
 }
-header #motionPath3 {
+header #motionPath3 .motion-path {
   transform: scale(2);
   position: absolute;
 }
-header #motionPath3 .bird svg {
+header #motionPath3 .motion-path .bird svg {
   opacity: .2;
   transform: scale(0.18);
 }

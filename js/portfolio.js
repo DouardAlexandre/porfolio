@@ -22,8 +22,8 @@
     $(".project").hover3d({
      selector: ".project__card"
     });
-
-     $('[data-toggle="tooltip"]').tooltip()
+    //tooltips
+    $('[data-toggle="tooltip"]').tooltip()
     
     //animation bird
     var morphing = anime({
