@@ -422,7 +422,6 @@ footer .list-inline {
 }
 footer .list-inline .tooltip-inner {
   background-color: #00acd6 !important;
-  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
   color: #fff;
 }
 footer .list-inline .tooltip.bottom .tooltip-arrow {
