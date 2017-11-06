@@ -9,7 +9,7 @@ $( document ).ready(function() {
 	canvas.width = innerWidth;
 	canvas.height = innerHeight;
     canvas.width = 1000;
-   canvas.height = 1500;
+    canvas.height = 1000;
 
     // smokemachine(context, [r,g,b])
     var party = smokemachine(ctx, [255, 255, 255]);
@@ -26,7 +26,7 @@ $( document ).ready(function() {
 	}*/
 
 	setInterval(function(){
-		party.addsmoke(innerWidth/2, innerHeight,8)
+		party.addsmoke(innerWidth/4, innerHeight,5)
 	}, 500)
 
     

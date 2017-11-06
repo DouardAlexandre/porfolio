@@ -9,7 +9,7 @@
     var coord = nav.offset();
 
     $(document).scroll(function() {
-
+        if($(this).scrollTop()===0){ nav.css('background-color', 'transparent'); };
         scroll_start = $(this).scrollTop();
         if (scroll_start > coord.top && scroll_start < 1500){
               nav.css('background-color', 'transparent');  
@@ -23,19 +23,52 @@
      selector: ".project__card"
     });
 
-    //Lightbox
+    /*//Lightbox
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
        event.preventDefault();
        $(this).ekkoLightbox({
                 alwaysShowClose: true
                 
             });
+    });*/
+   /* $(document.body).on('show.bs.modal', function () {
+$(window.document).find('html').addClass('modal-open');
+});
+$(document.body).on('hide.bs.modal', function () {
+$(window.document).find('html').removeClass('modal-open');
+});*/
+    //gallery lightbox
+    $('.thumbnail').click(function(){
+          $('.modal-body-g').empty();
+          var title = $(this).parent('a').attr("title");
+          $('.modal-title-g').html(title);
+          $($(this).parents('div').html()).appendTo('.modal-body-g');
+          $('#myModal').modal({show:true});
+       //   $(document.body).removeClass('modal-open');
+       // $("body").css('overflow-y', 'hidden');
+        //$("#myModal").css('overflow-y', 'hidden');
     });
-$('#open-image').click(function (e) {
-                e.preventDefault();
-                $(this).ekkoLightbox();
-            });
+   /* $(document.body).on('show.bs.modal', function () {
+      $(document.body).addClass('modal-open');
+    });
+    $(document.body).on('hide.bs.modal', function () {
+      $(document.body).removeClass('modal-open');
+    });*/
+   $("#close").click(function(){
+ 
+        $("#myModal").modal("hide");
+        //$("body").css('overflow-y', 'hidden');
+    });
+    /*$(".close-modal").click(function(){
+        $("body").css('overflow-y', 'hidden');
+    });*/
+   /* $(".portfolio-modal").click(function(){
+        $("body").css('overflow', 'hidden');
+    });*/
     
+    /*jQuery('.closeit').click(function () {
+         jQuery('body').removeClass('modal-open');
+    });*/
 
     //animation bird
     var morphing = anime({
@@ -61,7 +94,7 @@ $('#open-image').click(function (e) {
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 6000,
+      duration: 16000,
       loop: true
     });
 
@@ -74,7 +107,7 @@ $('#open-image').click(function (e) {
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 8000,
+      duration: 18000,
       loop: true
     });
 
@@ -87,7 +120,7 @@ $('#open-image').click(function (e) {
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 8000,
+      duration: 10000,
       loop: true
     });
 

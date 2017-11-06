@@ -4,7 +4,10 @@
 	font-family: "Montserrat";
 	src: url('../vendor/fonts/Montserrat-Regular.ttf');
 }
+
 body {
+	margin:0;
+	padding: 0;
 	font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
@@ -107,95 +110,79 @@ header {
 	color: white;
 	width: 100%;
 	height: auto;
+	min-height:800px; 
+	// smoke
 	
-	#motionPath .motion-path{
-		position:absolute;
+	canvas{
+
+		//background-color:red;
+		position :absolute;
+		margin-top:10rem;
+		left:0rem;
+		opacity:.4;
+		transform:rotate(80deg);
+
+	}
+	
+	
+	#motionPath .motion-path, #motionPath2 .motion-path{
+		transform:scale(3);
+		position: absolute;
+		
 		.bird svg{
 			opacity:.4;
-			transform:scale(.3);
-		}
-		
-		transform:scale(2);
-		
-	} 
-	
-	
-	#motionPath3 .motion-path{
-		position:absolute;
-		.bird svg{
-			opacity:.8;
 			transform:scale(.2);
 		}
 
-		transform:scale(4);
+
+	}
+	#motionPath3 {
+		transform:scale(2);
+		position:absolute;
+		
+		.bird svg{
+			opacity:.2;
+			transform:scale(.18);
+		}
 
 	} 
+
+
 	.container {
 		padding-top: 100px;
 		padding-bottom: 50px;
 	}
-	// smoke
-	canvas{
-		//background-color:red;
-    position :absolute;
-    margin-top:40rem;
-    top:10rem;
-    left:-33rem;
-    opacity:.4;
-    transform:rotate(80deg);
 
-}
+	img {
 
-
-img {
-
-	display: block;
-	margin: 0 auto 20px;
-}
-.intro-text {
-	.name {
-		color:@gray-lighter;
 		display: block;
-		font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 1.5em;
+		margin: 0 auto 20px;
 	}
-	.skills {
-		font-size: 1.25em;
-		font-weight: 300;
-	}
-}
+	.intro-text {
 
-.bird{
-	.motionPath{
-		svg{
-			//z-index:10;
-			position: absolute;
+		.name {
+			//position: absolute;
+			color:@gray-lighter;
+			display: block;
+			font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.5em;
+		}
+		.skills {
+			font-size: 1.25em;
+			font-weight: 300;
+			color:white;
 		}
 	}
-	.motionPath2{
-		svg{
-			//z-index:10;
-			position: absolute;
-		}
-	}
-	.motionPath3{
-		svg{
-			//z-index:10;
-			
-			position: absolute;
-		}
-	}
-}
 }
 
 @media(min-width:768px) {
 	header {
-
 		.container {
 			padding-top: 200px;
 			padding-bottom: 100px;
+			
 		}
 		.intro-text {
 			.name {
@@ -205,47 +192,25 @@ img {
 				font-size: 1.75em;
 			}
 		}
-		/* .bird{
-			width:100%;
-			position: relative;
-			.morphing{
-		
-				left:4rem;
-				svg{
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					
-				}
-				
-			}
-			.morphing2{
-				position: absolute;
-				
-			}
-			} */
-
-		}
 	}
-	/* ---------------------------------------------navbar------------------------------------- */
-	
+}
+/* ---------------------------------------------navbar------------------------------------- */
 
-	.navbar-custom {
-		background-color: transparent;
-		font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		text-transform: uppercase;
-		font-weight: 700;
-		border: none;
-		-webkit-transition: all 1s ease-in;  
-		-moz-transition: all 1s ease-in; 
-		-o-transition: all 1s ease-in;  
-		transition: all 1s ease-in;  
-		
-		a:focus {
-			outline: none;
-		}
+
+.navbar-custom {
+	background-color: transparent;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	-webkit-transition: all 1s ease-in;  
+	-moz-transition: all 1s ease-in; 
+	-o-transition: all 1s ease-in;  
+	transition: all 1s ease-in;  
+	
+	a:focus {
+		outline: none;
+	}
 		//top page
 		.navbar-brand {
 			color: white;
@@ -257,6 +222,7 @@ img {
 			}
 		}
 		.navbar-nav {
+			
 			letter-spacing: 3px;
 			li {
 				a {
@@ -273,7 +239,7 @@ img {
 				&.active {
 					a {
 						color: white;
-						background: @theme-success;
+						background: transparent;
 						&:hover,
 						&:focus,
 						&:active {
@@ -285,14 +251,15 @@ img {
 			}
 		}
 		.navbar-toggle {
+			//background-color: black;
 			color: white;
 			text-transform: uppercase;
 			font-size: 10px;
 			border-color: white;
 			&:hover,
 			&:focus {
-				background-color: @theme-success;
-				color: white;
+				background-color: transparent;
+				color: @theme-success;
 				border-color: @theme-success;
 			}
 		}
@@ -330,6 +297,7 @@ img {
 
 
 	@media(max-width:767px) {
+		
 		.navbar-custom {
 			//background-color:white;
 		//color:black!important;
@@ -341,7 +309,7 @@ img {
 		// 	transition: all 0.3s;
 		// }
 		.navbar-collapse{
-			background-color:white;
+			background-color:#C6C8C5;
 			padding-bottom:4rem;
 			//color:black;
 		}
@@ -367,6 +335,7 @@ img {
 }
 
 @media(min-width:768px) {
+	
 	.navbar-custom {
 		-webkit-transition: all 1s ease-in;  
 		-moz-transition: all 1s ease-in; 
@@ -414,23 +383,25 @@ img {
 			max-height: 700px;
 			position :absolute;
 			background-size:contain;
-			top:-47rem;
+			top:-37rem;
 			width: 100%;
 		}
 	}
 }
 
 @media(min-width:1940px) {
-	
+	header{
+		background-image: url("../img/fondlg.png");
+	}
 	
 	.treebox{
 		//z-index: 100;
 		position: relative;
 		.trees {
-			max-height: 650px;
+			max-height: 850px;
 			position :absolute;
-			background-size:cover;
-			top:-22rem;
+			background-size:contain;;
+			top:40rem;
 			width: 100%;
 		}
 
@@ -509,14 +480,14 @@ img {
 		}
 	}
 	* {
-		z-index: 2;
+		//z-index: 2;
 	}
 }
 
 @media(min-width:767px) {
 	#portfolio {
 		.portfolio-item {
-			margin: 0 0 30px;
+			margin: 0 0 20px;
 		}
 	}
 }
@@ -579,20 +550,36 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
+	heigth:40rem;
+	width: 100%;
 	color: white;
+	background-color: black;
+	text-align: center;
+	
+	.list-inline{
+		position: absolute;
+		left:0;
+		right: 0;
+		margin-right: auto;
+		margin-left: auto;
+        bottom: -199rem;
+
+	}
+	
 	h3 {
 		margin-bottom: 30px;
 	}
-	.footer-above {
-		padding-top: 50px;
-		background-color: @theme-primary;
-	}
-	.footer-col {
-		margin-bottom: 50px;
-	}
+	
+	
 	.footer-below {
-		padding: 25px 0;
-		background-color: darken(@theme-primary, 5%);
+		margin-top: 6rem;
+		height: 24rem;
+		width: 100%;
+		background-color: black;
+		bottom: 0;
+		.col-lg-12{
+			bottom: -20rem;
+		}
 	}
 }
 
@@ -660,13 +647,25 @@ footer {
 			}
 		}
 	}
-
+	/* -------------------------------------------------------------modals---------------------------------------------- */
+	
+	.fade {
+		opacity: 0.75;
+		background-color: #000;
+	}
+	#myModal{
+		
+		overflow-y: auto !important 
+	}
 	.portfolio-modal {
-		.modal-content {
-			border-radius: 0;
+
+			//overflow-y: visible !important
+			.modal-content {
+				overflow-y: auto !important ;
+				border-radius: 0;
 			//transparency border
 			background-clip: border-box;
-			//background-color:white;
+			background-color:white;
 			-webkit-box-shadow: none;
 			box-shadow: none;
 			border: none;
@@ -685,6 +684,7 @@ footer {
 			}
 		}
 		.close-modal {
+
 			position: absolute;
 			width:45px;
 			height:45px;
@@ -696,7 +696,8 @@ footer {
 				opacity: 0.3;
 			}
 			.lr {
-				height:75px;
+
+				height:35px;
 				width:1px;
 				margin-left:35px;
 				background-color:@theme-primary;
@@ -707,7 +708,7 @@ footer {
 				/* Safari and Chrome */
 				z-index:1051;
 				.rl {
-					height:75px;
+					height:35px;
 					width:1px;
 					background-color:@theme-primary;
 					transform: rotate(90deg);
@@ -720,6 +721,7 @@ footer {
 			}
 		}
 		.modal-backdrop {
+			z-index: -1;
 			opacity: 0;
 			display: none;
 		}
