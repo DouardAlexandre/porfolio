@@ -9,11 +9,11 @@
     var coord = nav.offset();
 
     $(document).scroll(function() {
-        if($(this).scrollTop()===0){ nav.css('background-color', 'transparent'); };
+        if($(this).scrollTop()<=0){ nav.css('background-color', 'transparent'); };
         scroll_start = $(this).scrollTop();
-        if (scroll_start > coord.top && scroll_start < 1500){
+        if (scroll_start < coord.top || scroll_start < 850){
               nav.css('background-color', 'transparent');  
-        } else if(scroll_start > 1500){
+        } else if(scroll_start > 850){
             nav.css('background-color', 'black');
         }
     });
