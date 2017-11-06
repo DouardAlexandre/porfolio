@@ -94,7 +94,7 @@ $(window.document).find('html').removeClass('modal-open');
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 6000,
+      duration: 16000,
       loop: true
     });
 
@@ -107,7 +107,7 @@ $(window.document).find('html').removeClass('modal-open');
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 8000,
+      duration: 18000,
       loop: true
     });
 
@@ -120,7 +120,7 @@ $(window.document).find('html').removeClass('modal-open');
       translateY: path('y'),
       //rotate: path('angle'),
       easing: 'linear',
-      duration: 8000,
+      duration: 10000,
       loop: true
     });
 

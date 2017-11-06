@@ -11,10 +11,6 @@ body {
 	font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
-	.modal-open { 
-		overflow-y: hidden!important;
-		margin-right: 0;
-	}
 }
 
 p {
@@ -39,11 +35,8 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h2{
-	display:block;
-}
-.modal-dialog {width:600px;}
-.thumbnail {margin-bottom:6px;}
+
+
 
 .img-centered {
 	margin: 0 auto;
@@ -117,45 +110,48 @@ header {
 	color: white;
 	width: 100%;
 	height: auto;
-	
-	#motionPath .motion-path{
-		position:absolute;
-		.bird svg{
-			opacity:.4;
-			transform:scale(.3);
-		}
-		
-		transform:scale(2);
-		
-	} 
-	
-	
-	#motionPath3 .motion-path{
-		position:absolute;
-		.bird svg{
-			opacity:.8;
-			transform:scale(.2);
-		}
-
-		transform:scale(4);
-
-	} 
-	.container {
-		padding-top: 100px;
-		padding-bottom: 50px;
-	}
+	min-height:800px; 
 	// smoke
+	
 	canvas{
+
 		//background-color:red;
 		position :absolute;
-		margin-top:40rem;
-		top:10rem;
-		left:-33rem;
+		margin-top:10rem;
+		left:0rem;
 		opacity:.4;
 		transform:rotate(80deg);
 
 	}
+	
+	
+	#motionPath .motion-path, #motionPath2 .motion-path{
+		transform:scale(3);
+		position: absolute;
+		
+		.bird svg{
+			opacity:.4;
+			transform:scale(.2);
+		}
 
+
+	}
+	#motionPath3 {
+		transform:scale(2);
+		position:absolute;
+		
+		.bird svg{
+			opacity:.2;
+			transform:scale(.18);
+		}
+
+	} 
+
+
+	.container {
+		padding-top: 100px;
+		padding-bottom: 50px;
+	}
 
 	img {
 
@@ -163,7 +159,9 @@ header {
 		margin: 0 auto 20px;
 	}
 	.intro-text {
+
 		.name {
+			//position: absolute;
 			color:@gray-lighter;
 			display: block;
 			font-family: "Montserrat", "Lato", Helvetica, Arial, sans-serif;
@@ -174,38 +172,17 @@ header {
 		.skills {
 			font-size: 1.25em;
 			font-weight: 300;
+			color:white;
 		}
 	}
-
-	.bird{
-		.motionPath{
-			svg{
-			//z-index:10;
-			position: absolute;
-		}
-	}
-	.motionPath2{
-		svg{
-			//z-index:10;
-			position: absolute;
-		}
-	}
-	.motionPath3{
-		svg{
-			//z-index:10;
-			
-			position: absolute;
-		}
-	}
-}
 }
 
 @media(min-width:768px) {
 	header {
-
 		.container {
 			padding-top: 200px;
 			padding-bottom: 100px;
+			
 		}
 		.intro-text {
 			.name {
@@ -215,47 +192,25 @@ header {
 				font-size: 1.75em;
 			}
 		}
-		/* .bird{
-			width:100%;
-			position: relative;
-			.morphing{
-		
-				left:4rem;
-				svg{
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					
-				}
-				
-			}
-			.morphing2{
-				position: absolute;
-				
-			}
-			} */
-
-		}
 	}
-	/* ---------------------------------------------navbar------------------------------------- */
-	
+}
+/* ---------------------------------------------navbar------------------------------------- */
 
-	.navbar-custom {
-		background-color: transparent;
-		font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		text-transform: uppercase;
-		font-weight: 700;
-		border: none;
-		-webkit-transition: all 1s ease-in;  
-		-moz-transition: all 1s ease-in; 
-		-o-transition: all 1s ease-in;  
-		transition: all 1s ease-in;  
-		
-		a:focus {
-			outline: none;
-		}
+
+.navbar-custom {
+	background-color: transparent;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	-webkit-transition: all 1s ease-in;  
+	-moz-transition: all 1s ease-in; 
+	-o-transition: all 1s ease-in;  
+	transition: all 1s ease-in;  
+	
+	a:focus {
+		outline: none;
+	}
 		//top page
 		.navbar-brand {
 			color: white;
@@ -267,6 +222,7 @@ header {
 			}
 		}
 		.navbar-nav {
+			
 			letter-spacing: 3px;
 			li {
 				a {
@@ -283,7 +239,7 @@ header {
 				&.active {
 					a {
 						color: white;
-						background: @theme-success;
+						background: transparent;
 						&:hover,
 						&:focus,
 						&:active {
@@ -295,14 +251,15 @@ header {
 			}
 		}
 		.navbar-toggle {
+			//background-color: black;
 			color: white;
 			text-transform: uppercase;
 			font-size: 10px;
 			border-color: white;
 			&:hover,
 			&:focus {
-				background-color: @theme-success;
-				color: white;
+				background-color: transparent;
+				color: @theme-success;
 				border-color: @theme-success;
 			}
 		}
@@ -340,6 +297,7 @@ header {
 
 
 	@media(max-width:767px) {
+		
 		.navbar-custom {
 			//background-color:white;
 		//color:black!important;
@@ -351,7 +309,7 @@ header {
 		// 	transition: all 0.3s;
 		// }
 		.navbar-collapse{
-			background-color:white;
+			background-color:#C6C8C5;
 			padding-bottom:4rem;
 			//color:black;
 		}
@@ -377,6 +335,7 @@ header {
 }
 
 @media(min-width:768px) {
+	
 	.navbar-custom {
 		-webkit-transition: all 1s ease-in;  
 		-moz-transition: all 1s ease-in; 
@@ -424,23 +383,25 @@ header {
 			max-height: 700px;
 			position :absolute;
 			background-size:contain;
-			top:-47rem;
+			top:-37rem;
 			width: 100%;
 		}
 	}
 }
 
 @media(min-width:1940px) {
-	
+	header{
+		background-image: url("../img/fondlg.png");
+	}
 	
 	.treebox{
 		//z-index: 100;
 		position: relative;
 		.trees {
-			max-height: 650px;
+			max-height: 850px;
 			position :absolute;
-			background-size:cover;
-			top:-22rem;
+			background-size:contain;;
+			top:40rem;
 			width: 100%;
 		}
 
@@ -589,20 +550,36 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
+	heigth:40rem;
+	width: 100%;
 	color: white;
+	background-color: black;
+	text-align: center;
+	
+	.list-inline{
+		position: absolute;
+		left:0;
+		right: 0;
+		margin-right: auto;
+		margin-left: auto;
+        bottom: -199rem;
+
+	}
+	
 	h3 {
 		margin-bottom: 30px;
 	}
-	.footer-above {
-		padding-top: 50px;
-		background-color: @theme-primary;
-	}
-	.footer-col {
-		margin-bottom: 50px;
-	}
+	
+	
 	.footer-below {
-		padding: 25px 0;
-		background-color: darken(@theme-primary, 5%);
+		margin-top: 6rem;
+		height: 24rem;
+		width: 100%;
+		background-color: black;
+		bottom: 0;
+		.col-lg-12{
+			bottom: -20rem;
+		}
 	}
 }
 
