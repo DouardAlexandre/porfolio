@@ -1,3 +1,4 @@
+
 @import "variables.less";
 @import "mixins.less";
 @font-face {
@@ -36,66 +37,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-
-
 .img-centered {
 	margin: 0 auto;
 }
-/* ---------------------------------------------Nav-------------------------------------- */
-// #mainNav #collapse-1 .nav .page-scroll a {
-// 	position: relative;
-// 	display: inline-block;
-// 	margin: 15px 25px;
-// 	outline: none;
-// 	color: red!important;
-// 	text-decoration: none;
-// 	text-transform: uppercase;
-// 	letter-spacing: 1px;
-// 	font-weight: 400;
-// text-shadow: 0 0 1px rgba(255,255,255,0.3);
-// 	font-size: 1.35em;
-// 	& span{
-// 		color: red!important;
-// 		position: relative;
-// 		display: inline-block;
-// 		width: 100%;
-// 	    padding: 0 14px;
-// 	    background: #e35041;
-// 	    -webkit-transition: -webkit-transform 0.4s, background 0.4s;
-// 	    -moz-transition: -moz-transform 0.4s, background 0.4s;
-// 	    transition: transform 0.4s, background 0.4s;
-// 	    -webkit-transform-style: preserve-3d;
-// 	    -moz-transform-style: preserve-3d;
-// 	    transform-style: preserve-3d;
-// 	    -webkit-transform-origin: 50% 50% -100px;
-// 	    -moz-transform-origin: 50% 50% -100px;
-// 	    transform-origin: 50% 50% -100px;
-// 	    &::before{
-// 	    	position: absolute;
-// 	    	top: 0;
-// 	    	left: 100%;
-// 	    	width: 100%;
-// 	    	height: 100%;
-// 	    	background: #b53a2d;
-// 	    	content: attr(data-hover);
-// 	    	-webkit-transition: background 0.4s;
-// 	    	-moz-transition: background 0.4s;
-// 	    	transition: background 0.4s;
-// 	    	-webkit-transform: rotateY(90deg);
-// 	    	-moz-transform: rotateY(90deg);
-// 	    	transform: rotateY(90deg);
-// 	    	-webkit-transform-origin: 0 50%;
-// 	    	-moz-transform-origin: 0 50%;
-// 	    	transform-origin: 0 50%;
-// 	    	pointer-events: none;
-// 	    }
-// 	}
-
-// }
-
-
-
-
 
 /* ---------------------------------------------header-------------------------------------- */
 header {
@@ -112,19 +56,13 @@ header {
 	height: auto;
 	min-height:800px; 
 	// smoke
-	
 	canvas{
-
-		//background-color:red;
 		position :absolute;
 		margin-top:10rem;
 		left:0rem;
 		opacity:.4;
 		transform:rotate(80deg);
-
 	}
-	
-	
 	#motionPath .motion-path, #motionPath2 .motion-path{
 		transform:scale(3);
 		position: absolute;
@@ -299,102 +237,93 @@ header {
 	@media(max-width:767px) {
 		
 		.navbar-custom {
-			//background-color:white;
-		//color:black!important;
-		padding: 25px 0;
-		// .navbar-brand {
-		// 	font-size: 2em;
-		// 	-webkit-transition: all 0.3s;
-		// 	-moz-transition: all 0.3s;
-		// 	transition: all 0.3s;
-		// }
-		.navbar-collapse{
-			background-color:#C6C8C5;
-			padding-bottom:4rem;
-			//color:black;
+			padding: 25px 0;
+			.navbar-collapse{
+				background-color:#C6C8C5;
+				padding-bottom:4rem;
+			}
 		}
-	}
-	section {
-		padding: 75px 0;
-	}
-	section.first {
-		padding-top: 75px;
-	}
-	.treebox{
-		position: relative;
-		.trees {
-			max-height: 500px;
-			position :absolute;
-			background-image: url("../img/tree4.png");
-			background-size:cover;
-			top:-18rem;
-			width: 100%;
+		section {
+			padding: 75px 0;
 		}
-	}
-	
-}
+		section.first {
+			padding-top: 75px;
+		}
+		.treebox{
+			position: relative;
+			.trees {
+				max-height: 500px;
+				position :absolute;
+				background-image: url("../img/tree4.png");
+				background-size:cover;
+				top:-18rem;
+				width: 100%;
+			}
+		}
 
-@media(min-width:768px) {
-	
-	.navbar-custom {
-		-webkit-transition: all 1s ease-in;  
-		-moz-transition: all 1s ease-in; 
-		-o-transition: all 1s ease-in;  
-		transition: all 1s ease-in; 
-		background-color:transparent;
-		padding: 25px 0;
-		-webkit-transition: padding 0.3s;
-		-moz-transition: padding 0.3s;
-		transition: padding 0.3s;
-		.navbar-brand {
-			font-size: 2em;
-			-webkit-transition: all 0.3s;
-			-moz-transition: all 0.3s;
-			transition: all 0.3s;
+	}
+
+	@media(min-width:768px) {
+
+		.navbar-custom {
+			-webkit-transition: all 1s ease-in;  
+			-moz-transition: all 1s ease-in; 
+			-o-transition: all 1s ease-in;  
+			transition: all 1s ease-in; 
+			background-color:transparent;
+			padding: 25px 0;
+			-webkit-transition: padding 0.3s;
+			-moz-transition: padding 0.3s;
+			transition: padding 0.3s;
+			.navbar-brand {
+				font-size: 2em;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+		}
+		.navbar-custom.affix {
+			padding: 10px 0;
+			.navbar-brand {
+				font-size: 1.5em;
+			}
+		}
+		.treebox{
+			position: relative;
+			.trees {
+				max-height: 700px;
+				position :absolute;
+				background-size:cover;
+				top:-26rem;
+				width: 100%;
+			}
 		}
 	}
-	.navbar-custom.affix {
-		padding: 10px 0;
-		.navbar-brand {
-			font-size: 1.5em;
-		}
-	}
-	.treebox{
-		position: relative;
-		.trees {
-			max-height: 700px;
-			position :absolute;
-			background-size:cover;
-			top:-26rem;
-			width: 100%;
-		}
-	}
-}
 
 
-@media(min-width:1400px) {
-	.treebox{
-		position: relative;
-		.trees {
-			display: none;
-		}
-		.trees3 {
-			opacity:1;
-			max-height: 700px;
-			position :absolute;
-			background-size:contain;
-			top:-37rem;
-			width: 100%;
+	@media(min-width:1400px) {
+		.treebox{
+			position: relative;
+			.trees {
+				display: none;
+			}
+			.trees3 {
+				opacity:1;
+				max-height: 700px;
+				position :absolute;
+				background-size:contain;
+				top:-37rem;
+				width: 100%;
+			}
 		}
 	}
-}
 
-@media(min-width:1940px) {
-	header{
-		background-image: url("../img/fondlg.png");
-	}
-	
-	.treebox{
+	@media(min-width:1940px) {
+		header{
+			background-image: url("../img/fondlg.png");
+		}
+
+		.treebox{
 		//z-index: 100;
 		position: relative;
 		.trees {
@@ -429,9 +358,6 @@ header {
 #portfolio {
 	height: auto;
 	width: 100%;
-	//background-color:white; 
-	//z-index: 200;
-
 	.portfolio-item {
 		margin: 0 0 15px;
 		right: 0;
@@ -557,13 +483,20 @@ footer {
 	text-align: center;
 	
 	.list-inline{
-		position: absolute;
+		//position: absolute;
 		left:0;
 		right: 0;
 		margin-right: auto;
 		margin-left: auto;
-        bottom: -199rem;
+		.tooltip-inner {
+  background-color: #00acd6 !important;
+  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+  color: #fff;
+}
 
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #00acd6;
+}
 	}
 	
 	h3 {

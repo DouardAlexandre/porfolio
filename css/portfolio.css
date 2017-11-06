@@ -41,7 +41,6 @@ h6 {
 .img-centered {
   margin: 0 auto;
 }
-/* ---------------------------------------------Nav-------------------------------------- */
 /* ---------------------------------------------header-------------------------------------- */
 header {
   position: relative;
@@ -416,12 +415,18 @@ footer {
   text-align: center;
 }
 footer .list-inline {
-  position: absolute;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
-  bottom: -199rem;
+}
+footer .list-inline .tooltip-inner {
+  background-color: #00acd6 !important;
+  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+  color: #fff;
+}
+footer .list-inline .tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #00acd6;
 }
 footer h3 {
   margin-bottom: 30px;
