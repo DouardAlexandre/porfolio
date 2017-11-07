@@ -7,11 +7,15 @@
   font-family: "Montserrat";
   src: url('../vendor/fonts/Montserrat-Regular.ttf');
 }
+html,
+body {
+  height: 100%;
+}
 html {
   overflow-x: hidden;
   /* &::-webkit-scrollbar { 
 		display: none; 
-	} */
+		} */
 }
 body {
   margin: 0;
