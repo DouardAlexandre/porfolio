@@ -310,6 +310,8 @@ section h2 {
 #portfolio {
   height: auto;
   width: 100%;
+  position: relative;
+  text-align: center;
 }
 #portfolio .tree_logo {
   position: absolute;
@@ -321,11 +323,31 @@ section h2 {
   margin-left: auto;
   top: -7rem;
 }
+#portfolio .tree_logo2 {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  right: 49rem;
+  left: 16.7rem;
+  margin-right: auto;
+  margin-left: 15rem;
+  top: -7rem;
+}
+#portfolio .tree_logo3 {
+  position: absolute;
+  width: 90px;
+  right: 40rem;
+  left: 19.8rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -7rem;
+}
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
   display: flex;
   position: relative;
+  padding-bottom: 6rem;
 }
 #portfolio .portfolio-item .project__title {
   position: absolute;
@@ -418,26 +440,23 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 footer {
-  height: 20rem;
+  height: 18rem;
   width: 100%;
   color: white;
   background-color: black;
   text-align: center;
 }
-footer .making_off {
-  text-align: justify;
-}
 footer .making_off p {
-  margin-left: 2rem;
-  display: inline-block;
   font-size: 1.4rem;
-  left: 0;
+  margin: 0;
+  padding: 0;
 }
 footer .list-inline {
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 2.5rem;
 }
 footer .list-inline .tooltip-inner {
   background-color: #00acd6 !important;
