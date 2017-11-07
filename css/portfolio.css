@@ -7,13 +7,18 @@
   font-family: "Montserrat";
   src: url('../vendor/fonts/Montserrat-Regular.ttf');
 }
+html {
+  overflow-x: hidden;
+  /* &::-webkit-scrollbar { 
+		display: none; 
+	} */
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  width: 100vw;
 }
 p {
   font-size: 20px;
@@ -53,7 +58,7 @@ header {
   background-size: cover;
   text-align: center;
   color: white;
-  width: 100%;
+  width: 100vw;
   height: auto;
   min-height: 800px;
 }
@@ -115,6 +120,27 @@ header .intro-text .skills {
     font-size: 1.75em;
   }
 }
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro-text .name {
+    font-size: 3em;
+  }
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+  footer .list-inline {
+    padding-bottom: 0rem;
+  }
+}
 /* ---------------------------------------------navbar------------------------------------- */
 .navbar-custom {
   background-color: transparent;
@@ -161,7 +187,7 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: grey;
+  background: transparent;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -179,9 +205,14 @@ header .intro-text .skills {
 section.about {
   background: black;
   color: white;
+  padding-bottom: 2.9rem;
 }
 section.about h2 {
   margin-top: 6rem;
+  padding-bottom: 2rem;
+}
+section.about p {
+  padding-bottom: 2rem;
 }
 section {
   padding: 100px 0;
@@ -201,6 +232,7 @@ section h2 {
   width: 100%;
 }
 .treebox .trees3 {
+  width: 100%;
   opacity: 0;
   position: absolute;
 }
@@ -278,6 +310,7 @@ section h2 {
     position: absolute;
     background-size: contain;
     top: -37rem;
+    width: 100%;
   }
 }
 @media (min-width: 1940px) {
@@ -441,8 +474,8 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 footer {
-  height: 18rem;
-  width: 100%;
+  height: 32.5rem;
+  max-width: 100%;
   color: white;
   background-color: black;
   text-align: center;
@@ -450,14 +483,17 @@ footer {
 footer .making_off p {
   font-size: 1.4rem;
   margin: 0;
-  padding: 0;
+  padding-bottom: 2rem;
 }
 footer .list-inline {
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 0.6rem;
+}
+footer .list-inline .tooltip {
+  background-color: transparent;
 }
 footer .list-inline .tooltip-inner {
   background-color: #00acd6 !important;
@@ -472,7 +508,7 @@ footer h3 {
 footer .footer-below {
   height: 10rem;
   width: 100%;
-  background-color: black;
+  background-color: #2d3b57;
   bottom: 0;
 }
 footer .footer-below .col-lg-12 {
